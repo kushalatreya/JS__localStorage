@@ -10,8 +10,8 @@ let button = document.getElementById('button');
 let displayData = document.getElementById('display_data');
 
   
-document.getElementById('button').addEventListener('click', save);
-    
+button.addEventListener('click', save);
+display();
 
 
 //saving in the form of ' 'key' 'value' ' pair 
@@ -34,7 +34,7 @@ function display(){
       let  a = localStorage.key(i);
       let  b = localStorage.getItem(a);
       console.log(b)
-    displayData.innerHTML += a + ' ' + b + '<br>'
+    displayData.innerHTML +='username is:' + a + ' password is: ' + b + '<br>'
     }
 }
 
